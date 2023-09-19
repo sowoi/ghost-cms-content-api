@@ -1,0 +1,15 @@
+[Unit]
+Description=OpenSearch Hook Service
+After=network.target
+
+[Service]
+EnvironmentFile=<SCRIPT_PATH>/.config
+ExecStart=<SCRIPT_PATH>/opensearchhook.py
+Restart=always
+User=<SCRIPT_USER>
+Group=<SCRIPT_USER>
+WorkingDirectory=<SCRIPT_PATH>
+Environment="PATH=/home/<SCRIPT_USER>/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+[Install]
+WantedBy=multi-user.target
