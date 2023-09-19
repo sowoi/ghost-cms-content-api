@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "opensearch"
+version = "0.1.0"
+description = "Opensearch webhook for ghostcms"
+authors = ["okxo.de"]
+license = "GPLv3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+opensearch-py = "^2.3.1"
+cryptography = "^41.0.3"
+asyncio = "^3.4.3"
+flask = {extras = ["async"], version = "^2.3.3"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
